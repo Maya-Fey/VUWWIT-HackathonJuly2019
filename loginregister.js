@@ -15,6 +15,7 @@ function onLoginReturn(success, message)
 	if(success) { 
 		alert("Login Succeeded")
 		assignLoginCookies(username, pass);
+		window.location.href = "/index.html";
 	} else {
 		alert("Login Failed: " + message);
 	}
