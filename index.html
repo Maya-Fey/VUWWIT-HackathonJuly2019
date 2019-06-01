@@ -16,11 +16,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 <body ng-controller="MainCtrl">
-
-   <H1>
+    <div class="container">
+   <H1 class="header">
        The Student Bulletin
    </H1>
 
+   <div class="filters">
+        <div class="dropdown">
+            <button type="button" class="btn-primary dropdown-toggle" data-toggle="dropdown">
+            Categories
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#Events" onclick="return updateCategory('Events')">Events</a>
+                <a class="dropdown-item" href="#RestaurantsAndBars" onclick="return updateCategory('Restaurants & Bars')">Restaurants & Bars</a>
+                <a class="dropdown-item" href="#BuySell" onclick="return updateCategory('Buy/Sell')">Buy/Sell</a>
+            </div>
+        </div>
 
     <div class="dropdown">
      <button type="button" class="btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -98,8 +109,20 @@
         </div>
       </div>
 
+        <div class="dropdown">
+            <button type="button" class="btn-primary dropdown-toggle" data-toggle="dropdown">
+            Sort By
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#Events" onclick="return updateSort('Newest')">Date (Newest)</a>
+                <a class="dropdown-item" href="#RestaurantsAndBars" onclick="return updateSort('Oldest')">Date (Oldest)</a>
+            </div><br /><br />
+            <button type="button" class="btn btn-secondary" onclick="return submit()">
+                Submit
+            </button>
+        </div>
+    </div>
 
-    
    <table class="table">
 
         <thead> <!-- first row, the headers-->
@@ -141,6 +164,7 @@
         </tbody>
     
        </table>
+    </div>
 
 
        

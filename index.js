@@ -1,3 +1,6 @@
+var selectedCategory = ""
+var sortBy = ""
+
 $(document).ready(function() {
 
   var eventList = [
@@ -36,3 +39,18 @@ $(document).ready(function() {
       // console.log(index);
   });
 });
+
+const updateCategory = (category) => {
+  console.log(category);
+  selectedCategory = category
+  console.log();
+}
+
+const updateSort = (type) => {
+  console.log(type);
+  sortBy = type
+}
+
+const submit = () => {
+  
+}
