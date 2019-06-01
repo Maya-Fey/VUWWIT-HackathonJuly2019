@@ -88,3 +88,9 @@ const submit = () => {
 
   //hit api
 }
+
+const checkIfLoggedIn = () => {
+  isLoggedIn()
+    ? null
+    : window.location.href = "/loginregister.html";
+}
