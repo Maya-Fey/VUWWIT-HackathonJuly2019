@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Student Bulletin</title>
 
-    link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="./index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -28,47 +28,53 @@ Categories
 </button>
 <div class="dropdown-menu">
     <a class="dropdown-item" href="#Events">Events</a>
-    <a class="category-item" href="#RestaurantsAndBars">Restaurants & Bars</a>
-    <a class="category-item" href="#BuySell">Buy/Sell</a>
+    <a class="dropdown-item" href="#RestaurantsAndBars">Restaurants & Bars</a>
+    <a class="dropdown-item" href="#BuySell">Buy/Sell</a>
 </div>
 
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown button
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-    </div>
-  </div>
-</div>
 
-<div id="Events">
-    <!--All events posts in this section please-->
-</div>
+    
+   <table class="table">
 
-<div id="RestaurantsAndBars">
-    <!-- All restaurants and bars posts in this section please-->
-</div>
-
-<div id="BuySell">
-    <!-- All buy/sell posts in this section please-->
-</div>
-
-       Hello world!
-   </H1>
-
-<div id="divTarget">hello</div>
-
-
-
-   </H1>
-   <div class="bullet">
-       <h3>Title: </h3>
-       <h3>Date: </h3>
-       <h3>Description :</h3>
-   </div>
+        <thead> <!-- first row, the headers-->
+            <tr> <!-- table row-->
+                <th scope="col">Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Location</th>
+                <th scope="col">Description</th>
+                <th scope="col">Posted by</th>
+            </tr>
+        </thead>
+    
+        <tbody><!-- table body -->
+            <a>
+                <tr>
+                    <td>Generation2</td> <!--table data-->
+                    <td>1st June</td>
+                    <td>Valhalla</td>
+                    <td>Lisa Rocks!</td>
+                    <td>Lisa Yan</td>
+                </tr>
+            </a>
+    
+            <tr>
+                <td>SuddenlyNamed</td>
+                <td>17th May</td>
+                <td>Caroline</td>
+                <td>In support of the Chahou Nomads Launch</td>
+                <td>Jazzy Jazz</td>
+            </tr>
+    
+            <tr>
+                <td>Flux/VUWWIT Hackathon</td>
+                <td>1st June</td>
+                <td>Flux @Coustonhouse Quay</td>
+                <td>Hackout awesome website!!</td>
+            </tr>
+    
+        </tbody>
+    
+       </table>
 
    <script src="index.js"></script>
 </body>
