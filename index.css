@@ -1,7 +1,26 @@
+
+
 .header {
   color: red;
   text-align: center;
-  margin: 20px
+  margin: 20px;
+  font-family: font-family: 'Rubik', sans-serif;
+  font-size: 65px;
+  font-weight: bold;
+}
+
+#tableRows{
+  font-family: 'Indie Flower', cursive;
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 1px 1px #0069d9;
+}
+
+thead{
+  font-family: 'Indie Flower', cursive;
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 1px 1px #0069d9; 
 }
 
 /* .filters {
@@ -33,7 +52,7 @@
 .emblem {
   width: 80px;
   height: auto
-} */
+} 
 .bullet-button {
   height: 35px
 }
