@@ -26,9 +26,9 @@ function login(username, pass, whendone)
 /**
   * whendone=accept (boolean, string) boolean = true on success, string = error on fail
   */
-function register(name, age, gender, uni, year, degree, major, whendone)
+function register(name, pass, age, gender, uni, year, degree, major, whendone)
 {
-	apiCall("register", "name=" + name + "&age=" + age + "&gender=" + gender + "&uni=" + uni + "&year=" + year + "&degree=" + degree + "&major=" + major, function(data) {
+	apiCall("register", "name=" + name + "&password=" + pass + "&age=" + age + "&gender=" + gender + "&uni=" + uni + "&year=" + year + "&degree=" + degree + "&major=" + major, function(data) {
 		if(data == "Success")
 		{
 			whendone(true, "Success");

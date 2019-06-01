@@ -12,29 +12,95 @@
 		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	</head>
 	<body id="bootstrap-overrides">
-		<div class="formWrapper">
-			
-				<div class="formGroup">
-					<label>
-						Username:
-					</label>
-					<input id="username" type="text"></input>
-					
-				</div>
-				<div class="formGroup">
-					<label>
-						Password:
-					</label>
-					
-						<input id="password" type="password"></input>
-					
-				</div>
-				<div class="formGroup">
-					
-						<button class="butt" onClick="onLogin();">Submit</button>
-					
-				</div>
-			
+		<br>
+		<br>
+		
+		<div class="selector">
+			<div id="loginbutton" class="selector-inner" onclick="setLoginActive(true);">
+				Login
+			</div>
+			<div id="registerbutton" class="selector-inner" onclick="setLoginActive(false);">
+				Register
+			</div>
 		</div>
+		
+		<br>
+		<br>
+		
+		<div id="login" class="formWrapper">
+			<div class="formGroup">
+				<label>
+					Username:
+				</label>
+				<input id="username" type="text"></input>
+			</div>
+			<div class="formGroup">
+				<label>
+					Password:
+				</label>
+				<input id="password" type="password"></input>
+			</div>
+			<div class="formGroup">
+				<button class="butt" onClick="onLogin();">Submit</button>
+			</div>
+		</div>
+		
+		<div id="register" class="formWrapper">
+			<div class="formGroup">
+				<label>
+					Username:
+				</label>
+				<input id="username-reg" type="text"></input>
+			</div>
+			<div class="formGroup">
+				<label>
+					Password:
+				</label>
+				<input id="password-reg" type="password"></input>
+			</div>
+			<div class="formGroup">
+				<label>
+					Age:
+				</label>
+				<input id="age" type="text"></input>
+			</div>
+			<div class="formGroup">
+				<label>
+					Gender:
+				</label>
+				<input id="gender" type="text"></input>
+			</div>
+			<div class="formGroup">
+				<label>
+					University:
+				</label>
+				<input id="university" type="text"></input>
+			</div>
+			<div class="formGroup">
+				<label>
+					Degree:
+				</label>
+				<input id="degree" type="text"></input>
+			</div>
+			<div class="formGroup">
+				<label>
+					Major:
+				</label>
+				<input id="major" type="text"></input>
+			</div>
+			<div class="formGroup">
+				<label>
+					Year:
+				</label>
+				<input id="year" type="text"></input>
+			</div>
+			<div class="formGroup">
+				<button class="butt" onClick="onRegister();">Submit</button>
+			</div>
+		</div>
+		
+		<script>
+			updateSelect();
+		</script>
 	</body>
 </html>

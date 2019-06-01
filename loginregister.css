@@ -10,12 +10,31 @@
     font-family: 'Josefin Sans', sans-serif;
   }
  
+
+.selector {
+	background-color: rgb(182, 188, 190);
+	padding: 0.25em;
+    border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 320px;
+	text-align: center;
+}
+
+.selector-inner {
+	display: inline-block;
+	text-align: center;
+	width: 40%;
+	padding: 1.75em;
+	border-radius: 5px;
+	color: white;
+}
   
  .formWrapper{
     max-width: 320px;
     background-color: rgb(182, 188, 190);
-    margin: auto;
-    margin-top:150px;
+    margin-left: auto;
+	margin-right: auto;
     padding: 20px;
     border-radius: 5px;
  }
