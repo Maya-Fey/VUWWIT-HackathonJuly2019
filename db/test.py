@@ -30,6 +30,16 @@ def requireExist(args, argname):
 def requireInt(args, argname):
 	test = int(args[argname]);
 	
+def getPass(user):
+	str = "SELECT `PASSWORD` FROM main.STUDENTS WHERE `NAME`=\"" + user + "\";";
+	conn = db_connect.connect(); 
+	query = conn.execute(str);
+	ret = query.cursor.fetchall();
+	if(len(ret) == 0):
+		return -1;
+	else:
+		return ret[0][0];
+	
 	
 class Test(Resource):
 	def get(self):
@@ -58,10 +68,29 @@ class Register(Resource):
 			query = conn.execute(str);
 			return "Success";
 		except IntegrityError:
-			return "Name Reuse";		
+			return "Name Reuse";
+
+class Login(Resource):
+	def get(self, data):
+		args = parseArgs(data);
+		
+		requireExist(args, "user");
+		requireExist(args, "password");
+		
+		password = getPass(args["user"]);
+		
+		if(password == -1):
+			return "User not found";
+		
+		if(password == args["password"]):
+			return "Success";
+		else:
+			return "Invalid password";
+	
 
 api.add_resource(Test, '/test');
 api.add_resource(Register, '/register/<data>');
+api.add_resource(Login, '/login/<data>');
 
 if __name__ == '__main__':
 	app.run(host='avatarthelegendreturns.com', port='5002')
