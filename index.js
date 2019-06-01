@@ -32,9 +32,16 @@ const loadTable = () => {
 
 
 const submitFilters = () => {
-  getBulletins(selectedCategory, (events)=>{
-    eventList = events;
-    loadTable();
+  selectedCategory === "all"
+   ? (
+     getBulletinsNoCategory((a) => {
+      eventList = a;
+      loadTable();
+    })
+   )
+   : getBulletins(selectedCategory, (events)=>{
+      eventList = events;
+      loadTable();
   });
 
 }
@@ -71,7 +78,20 @@ const submitNewBullet = () => {
 }
 
 const updateCategory = (category) => {
-  selectedCategory = category
+  selectedCategory = category;
+  categoryReadableText = "";
+  if (selectedCategory === 'Event') {
+    categoryReadableText = "Events";
+  }
+  else if (selectedCategory === 'RestaurantBar') {
+    categoryReadableText = "Restaurants/Bars";
+  }
+  else if (selectedCategory === 'BuySell') {
+    categoryReadableText = "Buy/Sell";
+  }
+  document.getElementById('categoryDropDown').innerHTML = categoryReadableText;
+
+
 }
 
 const updateSort = (type) => {

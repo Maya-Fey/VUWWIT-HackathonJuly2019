@@ -23,13 +23,16 @@ thead{
   text-shadow: 1px 1px #0069d9; 
 }
 
+.myButton {
+
+}
+
 /* .filters {
   margin-top: 20px;
   margin-bottom: 20px;
 } */
 
 .dropdown {
-  margin-top: 4.5px;
   margin-right: 5px
 }
 
@@ -46,7 +49,8 @@ thead{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: center
+  align-content: center;
+  align-items: center;
 }
 
 .emblem {
@@ -59,4 +63,8 @@ thead{
 
 .newBullet {
   height: 35px
+}
+
+#categoryDropDown {
+  width: 158px
 }
