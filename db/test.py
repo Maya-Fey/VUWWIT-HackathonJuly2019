@@ -102,7 +102,7 @@ class NewBulletin(Resource):
 		if(getPass(args["user"]) != args["password"]):
 			return "Authentication Error";
 		
-		str = "INSERT INTO main.BULLETIN (`TITLE`, `LOCATION`, `DESCRIPTION`, `AUTHOR`, `CATEGORY`, `DATETIME`) VALUES (\"" + args["user"] + "\", \"" + args["location"] + "\", \"" + args["description"] + "\", \"" + args["user"] + "\", \"" + args["category"] + "\", \"" + args["datetime"] + "\")";
+		str = "INSERT INTO main.BULLETIN (`TITLE`, `LOCATION`, `DESCRIPTION`, `AUTHOR`, `CATEGORY`, `DATETIME`) VALUES (\"" + args["title"] + "\", \"" + args["location"] + "\", \"" + args["description"] + "\", \"" + args["user"] + "\", \"" + args["category"] + "\", \"" + args["datetime"] + "\")";
 		
 		conn = db_connect.connect(); 
 		query = conn.execute(str);
@@ -118,7 +118,7 @@ class GetBulletins(Resource):
 		str = "SELECT * FROM main.BULLETIN"
 		
 		if(args["category"] != "__any"):
-			str += " WHERE `CATEGORY`=\"" + args["Category"] + "\"";
+			str += " WHERE `CATEGORY`=\"" + args["category"] + "\"";
 		
 		str += " ORDER BY ID DESC";
 		
