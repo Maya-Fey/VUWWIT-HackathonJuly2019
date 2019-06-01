@@ -37,3 +37,18 @@ function register(name, age, gender, uni, year, degree, major, whendone)
 		}
 	});
 }
+
+/**
+  * whendone=accept (boolean, string) boolean = true on success, string = error on fail
+  */
+function newBulletin(title, description, category, place, datetime, whendone)
+{
+	apiCall("newbulletin", "title=" + title + "&description=" + description + "&category=" + category + "&location=" + place + "&datetime=" + datetime + "&user=" + getUser() + "&password=" + getPassword(), function(data) {
+		if(data == "Success")
+		{
+			whendone(true, "Success");
+		} else {
+			whendone(false, data);
+		}
+	});
+}

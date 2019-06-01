@@ -106,6 +106,7 @@ class NewBulletin(Resource):
 		
 		conn = db_connect.connect(); 
 		query = conn.execute(str);
+		
 		return "Success";
 		
 
