@@ -54,7 +54,7 @@
 
                 <!-- Button trigger modal -->
 
-                <button type="button" class="btn btn-primary newBullet" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="btn btn-primary newBullet" data-toggle="modal" data-target="#exampleModal" onclick="return isLoggedIn()">
                     Create new Bullet
                 </button>
         
@@ -115,9 +115,6 @@
                             <button type="submit" class="btn btn-primary">Submit</button>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         </div>
-
-
-
             </div>
             
           </div>
@@ -170,6 +167,7 @@
 
 
    <script src="index.js"></script>
+   <script src="./user.js"></script>
 </body>
 
 </html>
