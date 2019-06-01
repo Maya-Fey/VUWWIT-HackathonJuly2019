@@ -56,6 +56,12 @@ $(document).ready(function() {
   });
 });
 
+const submitFilters = () => {
+  console.log(selectedCategory);
+  console.log(sortBy);
+  
+}
+
 const submitNewBullet = () => {
   var bullet = {
     Name: document.getElementById("bulletName").value,
@@ -88,4 +94,10 @@ const updateSort = (type) => {
 const submit = () => {
 
   //hit api
+}
+
+const checkIfLoggedIn = () => {
+  isLoggedIn()
+    ? null
+    : window.location.href = "/loginregister.html";
 }
