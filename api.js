@@ -4,7 +4,7 @@ function apiCall(call, args, thenfunc)
 		var call = $.get("http://avatarthelegendreturns.com:5002/" + call + "\\" + args);
 	else
 		var call = $.get("http://avatarthelegendreturns.com:5002/" + call);
-	
+
 	call.then(thenfunc);
 }
 
@@ -13,7 +13,7 @@ function apiCall(call, args, thenfunc)
   */
 function login(username, pass, whendone)
 {
-	apiCall("login", "user=" + username + "&password=" + pass, function(data) { 
+	apiCall("login", "user=" + username + "&password=" + pass, function(data) {
 		if(data == "Success")
 		{
 			whendone(true, "Success");
@@ -50,5 +50,17 @@ function newBulletin(title, description, category, place, datetime, whendone)
 		} else {
 			whendone(false, data);
 		}
+	});
+}
+
+function getBulletinsNoCategory(processResult)
+{
+	getBulletins("__any", processResult);
+}
+
+function getBulletins(cat, processResult)
+{
+	apiCall("getbulletins", "category=" + cat, function(data) {
+		processResult(data);
 	});
 }
