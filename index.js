@@ -12,8 +12,7 @@ $(document).ready(function() {
       Location: "Flux Federation",
       Description: "",
       Author: "Ali G",
-      Category: "Music",
-      TimeStamp: "Fri Jul 17 1998 00:00:00 GMT+1200 (New Zealand Standard Time)"
+      Category: "Music"
     },
     {
       Name: "gig",
@@ -21,8 +20,7 @@ $(document).ready(function() {
       Location: "Wellywood",
       Description: "We gon' gig",
       Author: "Ali G",
-      Category: "Music",
-      TimeStamp: "Fri Jul 17 1998 00:00:00 GMT+1200 (New Zealand Standard Time)"
+      Category: "Music"
     },
     {
       Name: "gig",
@@ -30,8 +28,7 @@ $(document).ready(function() {
       Location: "Wellywood",
       Description: "We gon' gig",
       Author: "Ali G",
-      Category: "Music",
-      TimeStamp: "Fri Jul 17 1998 00:00:00 GMT+1200 (New Zealand Standard Time)"
+      Category: "Music"
     },
     {
       Name: "Party",
@@ -39,31 +36,43 @@ $(document).ready(function() {
       Location: "At Laura's friend's house",
       Description: "We gon' gig it upppp",
       Author: "Moi",
-      Category: "Music",
-      TimeStamp: "Fri Jul 17 1998 00:00:00 GMT+1200 (New Zealand Standard Time)"
+      Category: "Event"
     }
   ];
 
 
-    $(eventList).each(function( index ) {
-      var tbody = document.getElementById('tableRows');
-      var row = document.createElement("tr");
+  $(eventList).each(function( index ) {
+    var tbody = document.getElementById('tableRows');
+    var row = document.createElement("tr");
 
-      for (var i=0; i<eventDisplayInfo.length; i++) {
-        var attribute = document.createElement("td");
-        var textNode = document.createTextNode(eventList[index][eventDisplayInfo[i]]);
-        attribute.appendChild(textNode);
-        row.append(attribute);
-      }
+    for (var i=0; i<eventDisplayInfo.length; i++) {
+      var attribute = document.createElement("td");
+      var textNode = document.createTextNode(eventList[index][eventDisplayInfo[i]]);
+      attribute.appendChild(textNode);
+      row.append(attribute);
+    }
 
-      tbody.appendChild(row);
-
-
-      //
-      // $("#divTarget").append(node);
-      // console.log(index);
+    tbody.appendChild(row);
   });
 });
+
+const submitNewBullet = () => {
+  var bullet = {
+    Name: document.getElementById("bulletName").value,
+    Date: document.getElementById("bulletDate").value,
+    Location: document.getElementById("bulletLocation").value,
+    Description: document.getElementById("bulletDescription").value,
+    Author: "user1",
+    Category: document.getElementById("bulletName").value
+
+  }
+
+  const { Name, Date, Location, Description, Author, Category} = bullet;
+
+  newBulletin(Name, Description, Category, Location, Date, (a,b) => {});
+
+  $('#exampleModal').modal(show=false);
+}
 
 const updateCategory = (category) => {
   console.log(category);
@@ -77,5 +86,6 @@ const updateSort = (type) => {
 }
 
 const submit = () => {
-  
+
+  //hit api
 }

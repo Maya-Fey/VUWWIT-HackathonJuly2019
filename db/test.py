@@ -87,10 +87,52 @@ class Login(Resource):
 		else:
 			return "Invalid password";
 	
+class NewBulletin(Resource):
+	def get(self, data):
+		args = parseArgs(data);
+		
+		requireExist(args, "user");
+		requireExist(args, "password");
+		requireExist(args, "title");
+		requireExist(args, "location");
+		requireExist(args, "description");
+		requireExist(args, "category");
+		requireExist(args, "datetime");
+		
+		if(getPass(args["user"]) != args["password"]):
+			return "Authentication Error";
+		
+		str = "INSERT INTO main.BULLETIN (`TITLE`, `LOCATION`, `DESCRIPTION`, `AUTHOR`, `CATEGORY`, `DATETIME`) VALUES (\"" + args["user"] + "\", \"" + args["location"] + "\", \"" + args["description"] + "\", \"" + args["user"] + "\", \"" + args["category"] + "\", \"" + args["datetime"] + "\")";
+		
+		conn = db_connect.connect(); 
+		query = conn.execute(str);
+		
+		return "Success";
+		
+class GetBulletins(Resource):
+	def get(self, data):
+		args = parseArgs(data);
+		
+		requireExist(args, "category");
+		
+		str = "SELECT * FROM main.BULLETIN"
+		
+		if(args["category"] != "__any"):
+			str += " WHERE `CATEGORY`=\"" + args["Category"] + "\"";
+		
+		str += " ORDER BY ID DESC";
+		
+		conn = db_connect.connect(); 
+		query = conn.execute(str);
+		
+		result = {'data': [dict(zip(tuple (query.keys()) ,i)) for i in query.cursor]}
+		return jsonify(result)
 
 api.add_resource(Test, '/test');
 api.add_resource(Register, '/register/<data>');
 api.add_resource(Login, '/login/<data>');
+api.add_resource(NewBulletin, '/newbulletin/<data>');
+api.add_resource(GetBulletins, '/getbulletins/<data>');
 
 if __name__ == '__main__':
 	app.run(host='avatarthelegendreturns.com', port='5002')

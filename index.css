@@ -1,26 +1,38 @@
 .header {
   color: red;
-  text-align: center
+  text-align: center;
+  margin: 20px
 }
-/* 
-.bullet {
-  background-color: aqua;
-  width: 50%;
-  margin-left: 25%;
-  min-width: 500px;
-  display: inline-block;
-  padding: 10px
+
+/* .filters {
+  margin-top: 20px;
+  margin-bottom: 20px;
 } */
 
-/* .bullet-image {
-  width: 190px
+.selectorContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.bullet-content {
-  margin-left: 20px
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center
 }
 
 .emblem {
   width: 80px;
   height: auto
 } */
+.bullet-button {
+  height: 35px
+}
+
+.newBullet {
+  height: 35px
+}
