@@ -12,8 +12,7 @@ $(document).ready(function() {
       Location: "Flux Federation",
       Description: "",
       Author: "Ali G",
-      Category: "Music",
-      TimeStamp: "Fri Jul 17 1998 00:00:00 GMT+1200 (New Zealand Standard Time)"
+      Category: "Music"
     },
     {
       Name: "gig",
@@ -21,8 +20,7 @@ $(document).ready(function() {
       Location: "Wellywood",
       Description: "We gon' gig",
       Author: "Ali G",
-      Category: "Music",
-      TimeStamp: "Fri Jul 17 1998 00:00:00 GMT+1200 (New Zealand Standard Time)"
+      Category: "Music"
     },
     {
       Name: "gig",
@@ -30,8 +28,7 @@ $(document).ready(function() {
       Location: "Wellywood",
       Description: "We gon' gig",
       Author: "Ali G",
-      Category: "Music",
-      TimeStamp: "Fri Jul 17 1998 00:00:00 GMT+1200 (New Zealand Standard Time)"
+      Category: "Music"
     },
     {
       Name: "Party",
@@ -39,8 +36,7 @@ $(document).ready(function() {
       Location: "At Laura's friend's house",
       Description: "We gon' gig it upppp",
       Author: "Moi",
-      Category: "Event",
-      TimeStamp: "Fri Jul 17 1998 00:00:00 GMT+1200 (New Zealand Standard Time)"
+      Category: "Event"
     }
   ];
 
@@ -67,10 +63,15 @@ const submitNewBullet = () => {
     Location: document.getElementById("bulletLocation").value,
     Description: document.getElementById("bulletDescription").value,
     Author: "user1",
-    Category: document.getElementById("bulletName").value,
-    TimeStamp: "01/06/2019"
+    Category: document.getElementById("bulletName").value
+
   }
-  console.log(bullet);
+
+  const { Name, Date, Location, Description, Author, Category} = bullet;
+
+  newBulletin(Name, Description, Category, Location, Date, (a,b) => {});
+
+  $('#exampleModal').modal(show=false);
 }
 
 const updateCategory = (category) => {
