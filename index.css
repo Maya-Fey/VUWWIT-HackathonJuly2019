@@ -2,9 +2,7 @@
   color: red;
   text-align: center
 }
-.image {
-  text-align: center;
-}
+/* 
 .bullet {
   background-color: aqua;
   width: 50%;
@@ -12,9 +10,9 @@
   min-width: 500px;
   display: inline-block;
   padding: 10px
-}
+} */
 
-.bullet-image {
+/* .bullet-image {
   width: 190px
 }
 
@@ -25,5 +23,9 @@
 .emblem {
   width: 80px;
   height: auto
-}
+} */
 
+.filters {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
