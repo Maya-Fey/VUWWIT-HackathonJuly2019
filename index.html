@@ -12,12 +12,14 @@
     <script type="text/javascript" src="api.js"></script>
     <script type="text/javascript" src="user.js"></script>
 
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="./index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
-<body ng-controller="MainCtrl">
+<body ng-controller="MainCtrl" background="BullitenBoard.jpg.jpg">
     <div class="container">
    <H1 class="header">
        The Student Bulletin
@@ -27,9 +29,7 @@
         <div class="selectors">
             <div class="filters">
                     <div class="dropdown">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                        Categories
-                        </button>
+                        <button type="button" id="categoryDropDown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Categories</button>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" onclick="return updateCategory('all')">All Categories</a>
                             <a class="dropdown-item" onclick="return updateCategory('Event')">Events</a>
@@ -54,10 +54,18 @@
         </div>
 
                 <!-- Button trigger modal -->
+                <div>
+                    <a href="/loginregister.html">
+                        <button type="button" class="btn btn-primary myButton" data-target="#exampleModal">
+                            Login / Register
+                        </button>
+                    </a>
 
-                <button type="button" class="btn btn-primary myButton" data-toggle="modal" data-target="#exampleModal" onclick="checkIfLoggedIn()">
-                    Create new Bullet
-                </button>
+                    <button type="button" class="btn btn-primary myButton" data-toggle="modal" data-target="#exampleModal" onclick="checkIfLoggedIn()">
+                        Create new Bullet
+                    </button>
+                </div>
+                
 
     </div>
 
@@ -132,9 +140,9 @@
         </div>
       </div>
 
-   <table class="table">
-
+   <table class="table" style="background-color: #ffffff81;">
         <thead> <!-- first row, the headers-->
+         
             <tr> <!-- table row-->
                 <th scope="col">Name</th>
                 <th scope="col">Date</th>
@@ -142,8 +150,9 @@
                 <th scope="col">Description</th>
                 <th scope="col">Posted by</th>
             </tr>
+         
         </thead>
-
+        
         <tbody id='tableRows'><!-- table body --></tbody>
 
        </table>
