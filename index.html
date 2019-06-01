@@ -22,7 +22,7 @@
    <H1 class="header">
        The Student Bulletin
    </H1>
-   
+
    <div class="selectorContainer">
         <div class="selectors">
 
@@ -46,7 +46,7 @@
                             <a class="dropdown-item" href="#Events" onclick="return updateSort('Newest')">Date (Newest)</a>
                             <a class="dropdown-item" href="#RestaurantsAndBars" onclick="return updateSort('Oldest')">Date (Oldest)</a>
                         </div>
-                        <button type="button" class="btn btn-primary bullet-button" onclick="return submit()">
+                        <button type="button" class="btn btn-primary bullet-button" onclick="submitFilters()">
                             Submit
                         </button>
                     </div>
@@ -59,12 +59,12 @@
                 <button type="button" class="btn btn-primary newBullet" data-toggle="modal" data-target="#exampleModal" onclick="return isLoggedIn()">
                     Create new Bullet
                 </button>
-        
-    </div>
-        
-   
 
-      
+    </div>
+
+
+
+
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">

@@ -4,7 +4,7 @@ function apiCall(call, args, thenfunc)
 		var call = $.get("http://avatarthelegendreturns.com:5002/" + call + "\\" + args);
 	else
 		var call = $.get("http://avatarthelegendreturns.com:5002/" + call);
-	
+
 	call.then(thenfunc);
 }
 
@@ -13,7 +13,7 @@ function apiCall(call, args, thenfunc)
   */
 function login(username, pass, whendone)
 {
-	apiCall("login", "user=" + username + "&password=" + pass, function(data) { 
+	apiCall("login", "user=" + username + "&password=" + pass, function(data) {
 		if(data == "Success")
 		{
 			whendone(true, "Success");
