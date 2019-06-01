@@ -1,9 +1,34 @@
 .header {
   color: red;
-  text-align: center
+  text-align: center;
+  margin: 20px
+}
+
+/* .filters {
+  margin-top: 20px;
+  margin-bottom: 20px;
+} */
+
+.selectorContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .filters {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center
+}
+
+.bullet-button {
+  height: 35px
+}
+
+.newBullet {
+  height: 35px
 }
