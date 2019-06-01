@@ -5,7 +5,7 @@ var eventDisplayInfo = ["TITLE", "DATETIME", "LOCATION", "DESCRIPTION", "AUTHOR"
 
 $(document).ready(function() {
 
-  getBulletinsNoCategory();
+  loadAllBulletins();
 
 });
 
@@ -33,12 +33,7 @@ const loadTable = () => {
 
 const submitFilters = () => {
   selectedCategory === "all"
-   ? (
-     getBulletinsNoCategory((a) => {
-      eventList = a;
-      loadTable();
-    })
-   )
+   ? loadAllBulletins()
    : getBulletins(selectedCategory, (events)=>{
       eventList = events;
       loadTable();
@@ -46,10 +41,12 @@ const submitFilters = () => {
 
 }
 
-getBulletinsNoCategory((a) => {
-  eventList = a;
-  loadTable();
-});
+const loadAllBulletins = () => {
+  getBulletinsNoCategory((a) => {
+    eventList = a;
+    loadTable();
+  });
+}
 
 const submitNewBullet = () => {
   var category = "";
@@ -88,6 +85,9 @@ const updateCategory = (category) => {
   }
   else if (selectedCategory === 'BuySell') {
     categoryReadableText = "Buy/Sell";
+  }
+  else {
+    categoryReadableText = "All Categories";
   }
   document.getElementById('categoryDropDown').innerHTML = categoryReadableText;
 
