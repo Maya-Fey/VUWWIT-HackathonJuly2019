@@ -32,9 +32,16 @@ const loadTable = () => {
 
 
 const submitFilters = () => {
-  getBulletins(selectedCategory, (events)=>{
-    eventList = events;
-    loadTable();
+  selectedCategory === "all"
+   ? (
+     getBulletinsNoCategory((a) => {
+      eventList = a;
+      loadTable();
+    })
+   )
+   : getBulletins(selectedCategory, (events)=>{
+      eventList = events;
+      loadTable();
   });
 
 }
