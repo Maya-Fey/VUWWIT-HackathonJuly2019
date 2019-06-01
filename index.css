@@ -4,13 +4,16 @@
   margin: 20px
 }
 
+.myButton {
+
+}
+
 /* .filters {
   margin-top: 20px;
   margin-bottom: 20px;
 } */
 
 .dropdown {
-  margin-top: 4.5px;
   margin-right: 5px
 }
 
@@ -27,7 +30,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: center
+  align-content: center;
+  align-items: center;
 }
 
 .emblem {
