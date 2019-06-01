@@ -1,12 +1,13 @@
 
 
 .header {
-  color: red;
+  color:  #023e7e;
   text-align: center;
   margin: 20px;
-  font-family: font-family: 'Rubik', sans-serif;
+  font-family: font-family: 'Indie Flower', cursive;
   font-size: 65px;
   font-weight: bold;
+  text-shadow: 2px 4px #0069d9;
 }
 
 #tableRows{
