@@ -1,39 +1,39 @@
 <html>
 	<head>
 		<title>The Student Bullitin - Login</title>
+		<link rel="stylesheet" type="text/css" href="./loginregister.css" />
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="api.js"></script>
 		<script type="text/javascript" src="user.js"></script>
 		<script type="text/javascript" src="loginregister.js"></script>
+
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet"> 
+		
 	</head>
 	<body>
-		<div>
-			<table>
-				<tr>
-					<td>
+		<div class="formWrapper">
+			
+				<div class="formGroup">
+					<label>
 						Username:
-					</td>
-					<td>
-						<input id="username" type="text"></input>
-					</td>
-				</tr>
-				<tr>
-					<td>
+					</label>
+					<input id="username" type="text"></input>
+					
+				</div>
+				<div class="formGroup">
+					<label>
 						Password:
-					</td>
-					<td>
+					</label>
+					
 						<input id="password" type="password"></input>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Submit:
-					</td>
-					<td>
-						<button onClick="onLogin();">Submit</button>
-					</td>
-				</tr>
-			</table>
+					
+				</div>
+				<div class="formGroup">
+					
+						<button class="butt" onClick="onLogin();">Submit</button>
+					
+				</div>
+			
 		</div>
 	</body>
 </html>
