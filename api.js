@@ -18,7 +18,7 @@ function login(username, pass, whendone)
 		{
 			whendone(true, "Success");
 		} else {
-			whendone("false", data);
+			whendone(false, data);
 		}
 	});
 }
@@ -33,7 +33,7 @@ function register(name, age, gender, uni, year, degree, major, whendone)
 		{
 			whendone(true, "Success");
 		} else {
-			whendone("false", data);
+			whendone(false, data);
 		}
 	});
 }

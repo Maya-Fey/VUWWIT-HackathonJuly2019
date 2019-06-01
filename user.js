@@ -1,4 +1,5 @@
-function getCookie(cname) {
+function getCookie(cname) 
+{
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
   var ca = decodedCookie.split(';');
@@ -17,4 +18,26 @@ function getCookie(cname) {
 function setCookie(name, value)
 {
 	document.cookie = name + "=" + value + ";";
+}
+
+function isLoggedIn()
+{
+	return getCookie("loggedin") == "yes";
+}
+
+function getUser()
+{
+	return getCookie("user");
+}
+
+function getPassword()
+{
+	return getCookie("pass");
+}
+
+function assignLoginCookies(user, pass)
+{
+	setCookie("loggedin", "yes");
+	setCookie("user", user);
+	setCookie("pass", pass);
 }

@@ -22,15 +22,81 @@
    </H1>
 
 
-   <div class="dropdown">
-<button type="button" class="btn-primary dropdown-toggle" data-toggle="dropdown">
-Categories
-</button>
-<div class="dropdown-menu">
-    <a class="dropdown-item" href="#Events">Events</a>
-    <a class="dropdown-item" href="#RestaurantsAndBars">Restaurants & Bars</a>
-    <a class="dropdown-item" href="#BuySell">Buy/Sell</a>
-</div>
+    <div class="dropdown">
+     <button type="button" class="btn-primary dropdown-toggle" data-toggle="dropdown">
+     Categories
+     </button>
+     <div class="dropdown-menu">
+        <a class="dropdown-item" href="#Events">Events</a>
+        <a class="dropdown-item" href="#RestaurantsAndBars">Restaurants & Bars</a>
+        <a class="dropdown-item" href="#BuySell">Buy/Sell</a>
+    </div>
+
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Create new Bullet
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Create new Bullet</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              
+
+                    <form>
+                            <div class="form-group">
+                              <label for="nameOfBullet">Bullet Name</label>
+                              <input type="text" class="form-control" id="nameOfBullet" placeholder="Enter bullet title here">
+                                 <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                            </div>
+                            
+                            <div class="form-group">
+                              <label for="Category">Category</label> 
+                                <input type="radio" class="form-control" id="Category" name="Category" value="Event"> Event<br>
+                                <input type="radio" class="form-control" id="Category" name="Category" value="BuySell"> Buy/Sell<br>
+                                <input type="radio" class="form-control" id="Category" name="Category" value="RestaurantBar"> Restaurant/Bar
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Date">Date</label> 
+                                    Date:
+                                    <input type="date" name="date">
+                            </div>       
+                            
+                            <div class="form-group">
+                                    <label for="bulletDescription">Description</label>
+                                    <input type="text" class="form-control" id="bulletDescription" placeholder="Please provide a description for your bullet">
+                                       <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                            </div>
+
+                            <div class="form-group">
+                                    <label for="location">Location</label>
+                                    <input type="text" class="form-control" id="location" placeholder="Please provide a location for your bullet">
+                                       <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                            </div> 
+
+                    </form>
+
+
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        </div>
+
+
+
+            </div>
+            
+          </div>
+        </div>
+      </div>
 
 
     
@@ -75,6 +141,10 @@ Categories
         </tbody>
     
        </table>
+
+
+       
+
 
    <script src="index.js"></script>
 </body>
