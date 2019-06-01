@@ -25,16 +25,15 @@
 
    <div class="selectorContainer">
         <div class="selectors">
-
             <div class="filters">
                     <div class="dropdown">
                         <button type="button" class="btn-primary dropdown-toggle" data-toggle="dropdown">
                         Categories
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#Events" onclick="return updateCategory('Events')">Events</a>
-                            <a class="dropdown-item" href="#RestaurantsAndBars" onclick="return updateCategory('Restaurants & Bars')">Restaurants & Bars</a>
-                            <a class="dropdown-item" href="#BuySell" onclick="return updateCategory('Buy/Sell')">Buy/Sell</a>
+                            <a class="dropdown-item" onclick="return updateCategory('Event')">Events</a>
+                            <a class="dropdown-item" onclick="return updateCategory('RestaurantBar')">Restaurants & Bars</a>
+                            <a class="dropdown-item" onclick="return updateCategory('BuySell')">Buy/Sell</a>
                         </div>
                     </div>
 
@@ -43,12 +42,10 @@
                         Sort By
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#Events" onclick="return updateSort('Newest')">Date (Newest)</a>
-                            <a class="dropdown-item" href="#RestaurantsAndBars" onclick="return updateSort('Oldest')">Date (Oldest)</a>
+                            <a class="dropdown-item" onclick="return updateSort('Newest')">Date (Newest)</a>
+                            <a class="dropdown-item" onclick="return updateSort('Oldest')">Date (Oldest)</a>
                         </div>
-                        <button type="button" class="btn btn-primary bullet-button" onclick="submitFilters()">
-                            Submit
-                        </button>
+                        <button type="button" class="btn btn-primary bullet-button" onclick="submitFilters()">Filter</button>
                     </div>
 
             </div>
