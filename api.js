@@ -52,3 +52,15 @@ function newBulletin(title, description, category, place, datetime, whendone)
 		}
 	});
 }
+
+function getBulletinsNoCategory(processResult)
+{
+	getBulletins("__any", processResult);
+}
+
+function getBulletins(cat, processResult)
+{
+	apiCall("getbulletins", "category=" + cat, function(data) {
+		processResult(data);
+	});
+}
