@@ -87,10 +87,33 @@ class Login(Resource):
 		else:
 			return "Invalid password";
 	
+class NewBulletin(Resource):
+	def get(self, data):
+		args = parseArgs(data);
+		
+		requireExist(args, "user");
+		requireExist(args, "password");
+		requireExist(args, "title");
+		requireExist(args, "location");
+		requireExist(args, "description");
+		requireExist(args, "category");
+		requireExist(args, "datetime");
+		
+		if(getPass(args["user"]) != args["password"]):
+			return "Authentication Error";
+		
+		str = "INSERT INTO main.BULLETIN (`TITLE`, `LOCATION`, `DESCRIPTION`, `AUTHOR`, `CATEGORY`, `DATETIME`) VALUES (\"" + args["user"] + "\", \"" + args["location"] + "\", \"" + args["description"] + "\", \"" + args["user"] + "\", \"" + args["category"] + "\", \"" + args["datetime"] + "\")";
+		
+		conn = db_connect.connect(); 
+		query = conn.execute(str);
+		
+		return "Success";
+		
 
 api.add_resource(Test, '/test');
 api.add_resource(Register, '/register/<data>');
 api.add_resource(Login, '/login/<data>');
+api.add_resource(NewBulletin, '/newbulletin/<data>');
 
 if __name__ == '__main__':
 	app.run(host='avatarthelegendreturns.com', port='5002')

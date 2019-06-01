@@ -74,28 +74,28 @@
               </button>
             </div>
             <div class="modal-body">
-              
+
 
                     <form>
                             <div class="form-group">
                               <label for="nameOfBullet">Bullet Name</label>
-                              <input type="text" class="form-control" id="nameOfBullet" placeholder="Enter bullet title here">
+                              <input type="text" class="form-control" id="bulletName" placeholder="Enter bullet title here">
                                  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                            </div>
-                            
-                            <div class="form-group">
-                              <label for="Category">Category</label> 
-                                <input type="radio" class="form-control" id="Category" name="Category" value="Event"> Event<br>
-                                <input type="radio" class="form-control" id="Category" name="Category" value="BuySell"> Buy/Sell<br>
-                                <input type="radio" class="form-control" id="Category" name="Category" value="RestaurantBar"> Restaurant/Bar
                             </div>
 
                             <div class="form-group">
-                                <label for="Date">Date</label> 
+                              <label for="Category">Category</label>
+                                <input type="radio" class="form-control" id="bulletCategory" name="Category" value="Event"> Event<br>
+                                <input type="radio" class="form-control" id="bulletCategory" name="Category" value="BuySell"> Buy/Sell<br>
+                                <input type="radio" class="form-control" id="bulletCategory" name="Category" value="RestaurantBar"> Restaurant/Bar
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Date">Date</label>
                                     Date:
-                                    <input type="date" name="date">
-                            </div>       
-                            
+                                    <input type="date" name="date" id="bulletDate">
+                            </div>
+
                             <div class="form-group">
                                     <label for="bulletDescription">Description</label>
                                     <input type="text" class="form-control" id="bulletDescription" placeholder="Please provide a description for your bullet">
@@ -104,19 +104,19 @@
 
                             <div class="form-group">
                                     <label for="location">Location</label>
-                                    <input type="text" class="form-control" id="location" placeholder="Please provide a location for your bullet">
+                                    <input type="text" class="form-control" id="bulletLocation" placeholder="Please provide a location for your bullet">
                                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                            </div> 
+                            </div>
 
                     </form>
 
 
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary" onclick="submitNewBullet()">Submit</button>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         </div>
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -163,7 +163,7 @@
     </div>
 
 
-       
+
 
 
    <script src="index.js"></script>
