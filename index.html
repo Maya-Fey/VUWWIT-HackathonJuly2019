@@ -22,34 +22,49 @@
    <H1 class="header">
        The Student Bulletin
    </H1>
+   
+   <div class="selectorContainer">
+        <div class="selectors">
 
-   <div class="filters">
-        <div class="dropdown">
-            <button type="button" class="btn-primary dropdown-toggle" data-toggle="dropdown">
-            Categories
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#Events" onclick="return updateCategory('Events')">Events</a>
-                <a class="dropdown-item" href="#RestaurantsAndBars" onclick="return updateCategory('Restaurants & Bars')">Restaurants & Bars</a>
-                <a class="dropdown-item" href="#BuySell" onclick="return updateCategory('Buy/Sell')">Buy/Sell</a>
+            <div class="filters">
+                    <div class="dropdown">
+                        <button type="button" class="btn-primary dropdown-toggle" data-toggle="dropdown">
+                        Categories
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#Events" onclick="return updateCategory('Events')">Events</a>
+                            <a class="dropdown-item" href="#RestaurantsAndBars" onclick="return updateCategory('Restaurants & Bars')">Restaurants & Bars</a>
+                            <a class="dropdown-item" href="#BuySell" onclick="return updateCategory('Buy/Sell')">Buy/Sell</a>
+                        </div>
+                    </div>
+
+                <div class="dropdown">
+                        <button type="button" class="btn-primary dropdown-toggle" data-toggle="dropdown">
+                        Sort By
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#Events" onclick="return updateSort('Newest')">Date (Newest)</a>
+                            <a class="dropdown-item" href="#RestaurantsAndBars" onclick="return updateSort('Oldest')">Date (Oldest)</a>
+                        </div>
+                        <button type="button" class="btn btn-primary bullet-button" onclick="return submit()">
+                            Submit
+                        </button>
+                    </div>
+
             </div>
         </div>
 
-    <div class="dropdown">
-     <button type="button" class="btn-primary dropdown-toggle" data-toggle="dropdown">
-     Categories
-     </button>
-     <div class="dropdown-menu">
-        <a class="dropdown-item" href="#Events">Events</a>
-        <a class="dropdown-item" href="#RestaurantsAndBars">Restaurants & Bars</a>
-        <a class="dropdown-item" href="#BuySell">Buy/Sell</a>
+                <!-- Button trigger modal -->
+
+                <button type="button" class="btn btn-primary newBullet" data-toggle="modal" data-target="#exampleModal" onclick="return isLoggedIn()">
+                    Create new Bullet
+                </button>
+        
     </div>
+        
+   
 
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Create new Bullet
-      </button>
-
+      
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -102,28 +117,11 @@
                             <button type="submit" class="btn btn-primary" onclick="submitNewBullet()" data-dismiss="modal">Submit</button>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         </div>
-
-
-
             </div>
 
           </div>
         </div>
       </div>
-
-        <div class="dropdown">
-            <button type="button" class="btn-primary dropdown-toggle" data-toggle="dropdown">
-            Sort By
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#Events" onclick="return updateSort('Newest')">Date (Newest)</a>
-                <a class="dropdown-item" href="#RestaurantsAndBars" onclick="return updateSort('Oldest')">Date (Oldest)</a>
-            </div><br /><br />
-            <button type="button" class="btn btn-secondary" onclick="return submit()">
-                Submit
-            </button>
-        </div>
-    </div>
 
    <table class="table">
 
@@ -171,6 +169,7 @@
 
 
    <script src="index.js"></script>
+   <script src="./user.js"></script>
 </body>
 
 </html>
